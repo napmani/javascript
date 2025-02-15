@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Merge two arrays and print the array in ascendind order</title>
+    </head>
+    <body>
+        <script>
+            var ar=[1,2,3,7,8,9]
+            var br=[4,5,6]
+            var cr=[...ar,...br]
+            for(var i=0;i<=cr.length-1;i++)
+            {
+                for(var j=1;j<=cr.length-2;j++)
+                {
+                    if(cr[j]>cr[j+1])
+                    {
+                        var c=cr[j];
+                        cr[j]=cr[j+1];
+                        cr[j+1]=c;
+                    }
+                }
+            }
+            console.log(cr)
+        </script>
+    </body>
+</html>

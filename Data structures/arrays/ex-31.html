@@ -1,0 +1,37 @@
+<!-- <html>
+    <head>
+        <title>Print only multiples of 3 OR 5 from an array</title>
+    </head>
+    <body>
+        <script>
+            var ar=[3,9,7,5,15,30,31,45,48,49,50,52]
+            for(var i=0;i<=ar.length-1;i++)
+            {
+                if(ar[i]%3==0 || ar[i]%5==0)
+                {
+                    document.write(ar[i]+"&nbsp")
+                }
+            }
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Print only multiples of 3 OR 5 from an array</title>
+    </head>
+    <body>
+        <script>
+            var ar=[3,9,7,5,15,30,31,45,48,49,50,52]
+            var br=[];
+            for(var i=0;i<=ar.length-1;i++)
+            {
+                if(ar[i]%3==0 || ar[i]%5==0)
+                {
+                    br.push(ar[i])
+                }
+            }
+            console.log(br)
+        </script>
+    </body>
+</html>

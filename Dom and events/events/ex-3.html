@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Change button background color on click</title>
+    </head>
+    <body style="background-color: rgb(227, 210, 185);">
+        <h1 style="color: red;display: flex;justify-content: center;" >Change button background color on click</h1>
+        <center><button onclick="change()" id="d1" style='background-color: white;'>white</button>  </center>
+     <script>
+        function change(){
+            if(document.getElementById('d1').innerText=="white")
+            {
+                document.getElementById('d1').innerText="green"
+                document.getElementById('d1').style.backgroundColor="green"
+            }
+            else
+            {
+                document.getElementById('d1').style.backgroundColor='white'
+                document.getElementById('d1').innerText="white"
+            }
+        }
+     </script> 
+    </body>
+</html>

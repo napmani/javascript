@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Display all male and female people in two separate tables.</title>
+    </head>
+    <body>
+        <script>
+            var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ]
+                        var t1=document.createElement('table')
+                        t1.border='1px'
+                        var t2=document.createElement('table')
+                        t2.border='1px'
+                        var thdr=document.createElement('thead')
+                        var thdr2=document.createElement('thead')
+                        var tb=document.createElement('tbody')
+                        var tb2=document.createElement('tbody')
+                        t1.appendChild(thdr)                       
+                        var ar=['firstname','lastname','age','gender','city','salary']
+                        var br=['firstname','lastname','age','gender','city','salary']
+                        ar.forEach(function(b){
+                            var th1=document.createElement('th')
+                            th1.innerText=b
+                            thdr.appendChild(th1)
+                        })
+                        br.forEach(function(c){
+                            var th2=document.createElement('th')
+                            th2.innerText=c
+                            thdr2.appendChild(th2)
+                            t2.appendChild(thdr2)
+                        })
+                        people.forEach(function(a){
+                            if(a.gender=="male")
+                            {
+                                var tr1=document.createElement('tr')
+                                var td1=document.createElement('td')
+                                td1.innerText=a.firstname
+                                tr1.appendChild(td1)
+                                var td2=document.createElement('td')
+                                td2.innerText=a.lastname
+                                tr1.appendChild(td2)
+                                var td3=document.createElement('td')
+                                td3.innerText=a.age
+                                tr1.appendChild(td3)
+                                var td4=document.createElement('td')
+                                td4.innerText=a.gender
+                                tr1.appendChild(td4)
+                                var td5=document.createElement('td')
+                                td5.innerText=a.city
+                                tr1.appendChild(td5)
+                                var td6=document.createElement('td')
+                                td6.innerText=a.salary
+                                tr1.appendChild(td6)
+                                tb.appendChild(tr1)
+                                t1.appendChild(tb)
+                            }
+                            else
+                            {
+                                var tr1=document.createElement('tr')
+                                var td1=document.createElement('td')
+                                td1.innerText=a.firstname
+                                tr1.appendChild(td1)
+                                var td2=document.createElement('td')
+                                td2.innerText=a.lastname
+                                tr1.appendChild(td2)
+                                var td3=document.createElement('td')
+                                td3.innerText=a.age
+                                tr1.appendChild(td3)
+                                var td4=document.createElement('td')
+                                td4.innerText=a.gender
+                                tr1.appendChild(td4)
+                                var td5=document.createElement('td')
+                                td5.innerText=a.city
+                                tr1.appendChild(td5)
+                                var td6=document.createElement('td')
+                                td6.innerText=a.salary
+                                tr1.appendChild(td6)
+                                tb2.appendChild(tr1)
+                                t2.appendChild(tb2)
+                            }
+                            
+                        })
+                        document.body.appendChild(t1)
+                        document.body.appendChild(t2)
+                        console.log(t1)
+                        console.log(t2)
+
+
+        </script>
+    </body>
+</html>

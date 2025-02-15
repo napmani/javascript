@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Stop Watch</title>
+        <style>
+            div{
+                display: flex;
+                justify-content: center;
+            }
+            button{
+                width:100px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div><h4 id="hr">00</h4><h4>:</h4><h4 id="min">00</h4><h4>:</h4><h4 id="sec">00</h4><h4>:</h4><h4 id="msec">00</h4></div>
+        <div>
+            <button id="sr" onclick="fun1()">Start</button>
+            <button onclick="fun2()">Pause</button>
+            <button onclick="fun3()">Reset</button>
+        </div>
+        <script>
+            var i=0;
+            var j=0;
+            var k=0;
+            var l=0;
+            var sw;
+            function fun1(){
+                clearInterval(sw)
+                sw=setInterval(function(){
+                    document.getElementById('msec').innerText=i;
+                    document.getElementById('sec').innerText=j;
+                    document.getElementById('min').innerText=k;
+                    document.getElementById('hr').innerText=l;
+                    i++;
+                    if(i==99){
+                        j++;
+                        i=0;
+                    }
+                    if(j==59){
+                        k++;
+                        j=0;
+                    }
+                    if(k==59){
+                        l++;
+                        k=0;
+                    }
+                    document.getElementById('sr').innerText="Resume"
+                },10)
+            }
+            function fun2(){
+                clearInterval(sw)
+            }
+            function fun3(){
+                document.getElementById('msec').innerText='00';
+                document.getElementById('sec').innerText='00';
+                document.getElementById('min').innerText='00';
+                document.getElementById('hr').innerText='00';
+                i=0;
+                j=0;
+                k=0;
+                l=0;
+                clearInterval(sw)
+                document.getElementById('sr').innerText='Start'
+            }
+        </script>
+    </body>
+</html>

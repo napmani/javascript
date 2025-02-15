@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Contact cards</title>
+        <style>
+            table{
+                color: red;
+                font-weight: 600;
+                font-size: 20px;
+                margin: auto;
+                
+            }
+            button{
+                background-color: orange;
+                margin: 20px;
+            }
+            h1{
+                color: red;
+                text-align: center;
+                font-size: 50px;
+                margin: 0px;
+            }
+            div{
+                height: 170px;
+                width: 250px;
+                background-color: orange;
+                padding:10px;
+                margin: 10px;
+                display: inline-block;
+                border: 2px solid red;
+            }
+            img{
+                height:40px;
+                width: 50px;
+                border-radius: 50%;
+                margin-left: 100px;
+            }
+        </style>
+    </head>  
+    <body>
+        <h1>Add Contact Cards</h1>
+        <table>
+            <tr>
+                <td><label for="">Name:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="">Number:</label></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><label for="">Email:</label></td>
+                <td><input type="Email"></td>
+            </tr>
+            <tr>
+                <td><label for="">Enter image URL:</label></td>
+                <td><input type="url"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button onclick="fun()">Add Contact</button></td>
+            </tr>
+        </table>
+        <script>
+            function fun(){
+                var t=document.querySelectorAll('label,input')
+                var d=document.createElement('div')
+                var i=document.createElement('img')
+                i.src=t[7].value
+                d.appendChild(i)
+                var h=document.createElement('h4')
+                h.innerText=t[0].innerText+t[1].value
+                var j=document.createElement('h4')
+                j.innerText=t[2].innerText+t[3].value
+                var k=document.createElement('h4')
+                k.innerText=t[4].innerText+t[5].value
+                d.appendChild(h)
+                d.appendChild(j)
+                d.appendChild(k)
+                document.body.appendChild(d)
+            }
+        </script>
+    </body>
+</html>

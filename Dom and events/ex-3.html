@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Store the texts of each li element in an array</title>
+    </head>
+    <body>
+        <script>
+            var x=document.createElement('ul')
+            var ar=['Apple','Mango','Traning']
+            for(var i=0;i<=ar.length-1;i++)
+            {
+               var uli=document.createElement('li')
+               uli.innerText=ar[i]
+               x.appendChild(uli)
+            }
+            document.body.appendChild(x)
+        </script>
+    </body>
+</html>

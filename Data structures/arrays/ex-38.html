@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Print the greatest of all 2-digit numbers present in an array.</title>
+    </head>
+    <body>
+        <script>
+            var ar=[99,1,22,33,44,55,66,77,88,98,100,2,3,4,5,6,7,8,9,111,223,445,667,889]
+            var max=ar[0];
+            for(var i=0;i<=ar.length-1;i++)
+            {
+                if(ar[i]>9 && ar[i]<100)
+                {
+                    if(max<ar[i])
+                    {
+                        max=ar[i]
+                    }
+                }
+            }
+            console.log(max)
+        </script>
+    </body>
+</html>

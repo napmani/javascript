@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Add student and display list</title>
+    </head>
+    <body>
+        <div style="display: flex;justify-content: center;">
+            <input id="i1" type="text">
+            <button onclick="fun()" style="background-color:rgb(235, 199, 132);margin-left: 5px;">Add Student</button>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <ul id="u1"></ul>
+        </div>
+        <script>
+            function fun(){
+                var x=document.createElement('li')
+                x.innerText=document.getElementById('i1').value
+                x.style.color="red";
+                var y=document.getElementsByTagName('ul')
+                y[0].appendChild(x)                
+            }
+        </script>
+    </body>
+</html>

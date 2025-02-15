@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Write a program to eliminate all 0’s from a given number</title>
+    </head>
+    <body>
+        <script>
+            var a=+prompt();
+            var sum=0;
+            while(a!==0)
+            {
+                var rem=a%10;
+                if(rem!==0)
+                {
+                    sum=sum*10+rem;
+                }
+                a=parseInt(a/10)
+            }
+            var b=0;
+            while(sum!==0)
+            {
+                var rem=sum%10;
+                b=b*10+rem;
+                sum=parseInt(sum/10);
+            }
+            console.log(b)
+        </script>
+    </body>
+</html>

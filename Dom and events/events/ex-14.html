@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Display images using image URLs</title>
+    </head>
+    <body>
+        <div style="display: flex; justify-content: center;">
+            <h3 style="color: red;margin: 0px;">Enter image URL:</h3>
+            <input type="text" id="i1">
+        </div>
+        <div style="display: flex; justify-content: center;margin-top: 10px;">
+            <button onclick="fun()">Add image</button>
+        </div>
+        <script>
+            function fun(){
+                var x=document.createElement('img')
+                var y=document.getElementById('i1').value
+                x.src=y
+                x.style.height="100px";
+                x.style.width="150px";
+                x.style.margin="3px";
+                document.body.appendChild(x)
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!-- <html>
+    <head>
+        <title>Color change button click</title>
+    </head>
+    <body>
+        <div style="width:220px;height:200px;border:1px solid" id="d1">
+
+        </div>
+        <button onclick="red()">RED</button>
+        <button onclick="green()">GREEN</button>
+        <button onclick="blue()">BLUE</button>
+        <button onclick="reset()">Reset</button>
+        <script>
+            function red(){
+                document.getElementById('d1').style.background='red'
+            }
+            function green(){
+                document.getElementById('d1').style.background='green'
+            }
+            function blue(){
+                document.getElementById('d1').style.background='blue'
+            }
+            function reset(){
+                document.getElementById('d1').style.background='none'
+            }
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div style="width:220px;height:200px;border:1px solid" id="d1">
+
+        </div>
+        <button onclick="fun('red')">RED</button>
+        <button onclick="fun('green')">GREEN</button>
+        <button onclick="fun('blue')">BLUE</button>
+        <button onclick="fun('none')">Reset</button>
+        <script>
+            function fun(ev){
+                document.getElementById('d1').style.background=ev
+            }
+        </script>s
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Live Time</title>
+        <style>
+            div{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h4>Date: </h4>
+            <h4 id="d">00:00:0000</h4>
+        </div>
+        <div>
+            <h4>Time:</h4>
+            <h4 id="t">00:00:00:00</h4>
+        </div>
+        <script>
+            setInterval(function(){
+                var pt=new Date();
+                document.getElementById('d').innerText=pt.getDate() + ":"+pt.getMonth()+":"+pt.getFullYear();
+                document.getElementById('t').innerText=pt.getHours()+":"+pt.getMinutes()+":"+pt.getSeconds()+":"+pt.getMilliseconds()
+            },1000)
+        </script>
+    </body>
+</html>

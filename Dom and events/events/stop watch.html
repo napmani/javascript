@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Time</title>
+        <style>
+            div{
+                display: flex;
+                justify-content: center;
+            }
+            h2{
+                display: flex;
+                justify-content: center;
+            }
+            button{
+                margin: 5px;
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2><p id="hl">0</p><p id="hr">0</p></h2>
+            <h2><p>:</p></h2>
+            <h2><p id="ml">0</p><p id="mr">0</p></h2>
+            <h2><p>:</p></h2>
+            <h2><p id="sl">0</p><p id="sr">0</p></h2>
+            <h2><p>:</p></h2>
+            <h2><p id="msl">0</p><p id="msr">0</p></h2>
+        </div>
+        <div>
+            <button id="srt" onclick="fun1()">Start</button>
+            <button id="pr">Pause</button>
+            <button id="rr">Reset</button>
+        </div>
+        <script>
+            var ir=0;
+            var il=0;
+            var jr=0;
+            var jl=0;
+            var kr=0;
+            var kl=0;
+            var lr=0;
+            var ll=0;
+            var sw;
+            function fun1(){
+                clearInterval(sw)
+                sw=setInterval(function(){
+                    var ms=document.getElementById('msr')
+                    document.getElementById('msl').innerText=il;
+                    document.getElementById('sr').innerText=jr;
+                    document.getElementById('sl').innerText=jl;
+                    document.getElementById('mr').innerText=kr;
+                    document.getElementById('ml').innerText=kl;
+                    document.getElementById('hr').innerText=lr;
+                    document.getElementById('hl').innerText=ll;
+                    ms.innerText=ir;
+                    ir++;
+                    if(ir==9){
+                        il++;
+                        ir=0;
+                    }
+                    if(il==9){
+                        jr++;
+                        il=0;
+                    }
+                    if(jr==9){
+                        jl++;
+                        jr=0;
+                    }
+                    if(jl==6){
+                        kr++;
+                        jl=0;
+                    }
+                    if(kr==9){
+                        kl++;
+                        kr=0;
+                    }
+                    if(kl==6){
+                        lr++;
+                        kl==0;
+                    }
+                    if(lr==9){
+                        ll++;
+                        lr=0;
+                    }
+                    document.getElementById('pr').onclick=function(){
+                        clearInterval(sw)
+                    }
+                    document.getElementById('rr').onclick=function(){
+                        document.getElementById('msr').innerText=0;
+                        document.getElementById('msl').innerText=0;
+                        document.getElementById('sr').innerText=0;
+                        document.getElementById('sl').innerText=0;
+                        document.getElementById('mr').innerText=0;
+                        document.getElementById('ml').innerText=0;
+                        document.getElementById('hr').innerText=0;
+                        document.getElementById('hl').innerText=0;
+                        ir=0;
+                        il=0;
+                        jr=0;
+                        jl=0;
+                        kr=0;
+                        kl=0;
+                        lr=0;
+                        ll=0;
+                        clearInterval(sw)
+                        document.getElementById('srt').innerText="Start"
+                    }
+                    document.getElementById('srt').innerText="Resume"
+                },10)
+            }
+        </script>
+    </body>
+</html>

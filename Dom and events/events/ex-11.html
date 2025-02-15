@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Toggle bulb on off</title>
+    </head>
+    <body>
+        <div style="display: flex;justify-content: center;">
+            <img src="https://cdn.mos.cms.futurecdn.net/kZohJ4E6NgVg7kXrFU7tnL-800-80.jpg" id="i1">
+        </div>
+        <div style="display: flex;justify-content: center;">
+            <button id="b1" onclick="fun()" style="background-color:rgb(192, 149, 70);">ON</button>
+        </div>
+        <script>
+            function fun(){
+                if(document.getElementById('b1').innerText=="ON")
+                {
+                    document.getElementById('i1').src="https://masshistorycommons.org/wp-content/uploads/2020/06/Icon-Suggestion-Box.jpeg"
+                    document.getElementById('b1').innerText="OFF"
+                }
+                else
+                {
+                    document.getElementById('i1').src="https://cdn.mos.cms.futurecdn.net/kZohJ4E6NgVg7kXrFU7tnL-800-80.jpg"
+                    document.getElementById('b1').innerText="ON"
+                }
+            }
+        </script>
+    </body>
+</html>

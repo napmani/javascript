@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>button toggle boolean value</title>
+    </head>
+    <body style="background-color: blanchedalmond;">
+        <h1 style="color: red;display: flex;justify-content: center;">Toggle button to show true/false</h1>
+        <div style="display: flex;justify-content: center;">
+            <button onclick="boolean()"style="background-color: rgb(235, 180, 31);display: inline-block;">Toggle</button>
+            <p id="p1"   style="display: inline-block;color: red;margin: 2px;">false</p>
+        </div>
+        <script>
+            function boolean(){
+                if(document.getElementById('p1').innerText=="false")
+                {
+                    document.getElementById('p1').innerText="true"
+                }
+                else
+                {
+                    document.getElementById('p1').innerText="false"
+                }
+            }
+        </script>
+    </body>
+</html>

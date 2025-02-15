@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Count the total number of even and odd elements in an array</title>
+    </head>
+    <body>
+        <script>
+            var ar=[23,34,54,10,4,7,15,18,12,13]
+            var ecount=0;
+            var ocount=0;
+            for(var i=0;i<=ar.length-1;i++)
+            {
+                if(ar[i]%2==0)
+                {
+                    ecount=ecount+1;
+                }
+                else
+                {
+                    ocount=ocount+1;
+                }
+            }
+            console.log("Total number of even elements = "+ecount)
+            console.log("Total number of odd elements = "+ocount)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            #d1 img{
+                height: 100px;
+                width: 150px;
+                margin: 5px;
+            }
+            #d1{
+                display: flex;
+                justify-content: center;
+            }
+            #d2 img{
+                height: 300px;
+                width: 450px;
+                margin-top: 10px;
+            }
+            #d2{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+            <div id="d1">
+
+            </div>
+            <div id="d2">
+                <img src="" id="i1">
+            </div>
+        <script>
+            var img=["https://2.bp.blogspot.com/-SShb0LOzbSI/WS234AMn5OI/AAAAAAABjpY/F6-bdKmp2QkdT-rZrMI9GqoU-iLdKJ31QCLcB/s640/audi-r8-audi-sport-edition_passion4luxury-15.jpeg",
+                    "https://technofaq.org/wp-content/uploads/2018/07/word-image-6.png",
+                    "https://th.bing.com/th/id/OIP.vyFgJwv0cIL2-8k7-EHd6gHaEK?w=1422&h=800&rs=1&pid=ImgDetMain"
+                   ]
+                   img.forEach(function(img){
+                    var images=document.createElement('img')
+                    images.src=img
+                    images.onmouseover=function(event){
+                        document.getElementById('i1').src=event.target.src
+                    }
+                    document.getElementById('d1').appendChild(images)
+                   })
+                   document.getElementById('i1').src=img[0]
+        </script>
+    </body>
+</html>

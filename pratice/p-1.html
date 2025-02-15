@@ -1,0 +1,62 @@
+<!-- <html>
+    <head>
+        <title>Prime numbers</title>
+    </head>
+    <body>
+        <script>
+            var a=+prompt();
+            var b=+prompt();
+            for(var i=a;i<=b;i++)
+            {
+                var count=0;
+                for(var j=1;j<=i;j++)
+                {
+                    if(i%j==0)
+                    {
+                        count=count+1;
+                    }
+                   
+                }
+                if(count==2)
+                    {
+                        console.log(i)
+                    }
+            }
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>armsrong</title>
+    </head>
+    <body>
+        <script>
+            var a=+prompt();
+            var b=a;
+            var d=a;
+            var count=0;
+            while(a!==0)
+            {
+                var rem=a%10;
+                count=count+1;
+                a=parseInt(a/10);
+            }
+            var sum=0;
+            while(b!==0)
+            {
+                var rem=b%10;
+                sum=sum+(rem**count);
+                b=parseInt(b/10)
+            }
+            if(sum==d)
+            {
+                console.log("armstrong number")
+            }
+            else
+            {
+                console.log("not armstrong number")
+            }
+        </script>
+    </body>
+</html>

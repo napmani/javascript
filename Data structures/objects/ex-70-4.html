@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Print the percentage of the marks of the student.</title>
+    </head>
+    <body>
+        <script>
+            var marks = {
+                                "maths" : 34,
+                                "english" : 56,
+                                "science": 32,
+                                "hindi" : 75,
+                                "social science": 65
+                            };
+            var sum=0;
+            var count=0;
+            for(var i in marks)
+            {
+                count=count+1;
+                sum=sum+marks[i];
+            }  
+            console.log(count)
+            console.log(sum)
+            var percentage=(sum/count)+"%"
+            console.log(percentage)           
+        </script>
+    </body>
+</html>

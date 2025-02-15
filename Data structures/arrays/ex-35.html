@@ -1,0 +1,37 @@
+<!-- <html>
+    <head>
+        <title>Print only those odd numbers in a given array which are divisible by 3.</title>
+    </head>
+    <body>
+        <script>
+            var ar=[3,6,9,10,1,13,15,9996333,446,3343,123]
+            for(var i=0;i<=ar.length-1;i++)
+            {
+                if(ar[i]%2!==0 && ar[i]%3==0)
+                {
+                    console.log(ar[i])
+                }
+            }
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Print only those odd numbers in a given array which are divisible by 3.</title>
+    </head>
+    <body>
+        <script>
+            var ar=[3,6,9,10,1,13,15,9996333,446,3343,123]
+            var br=[];
+            for(var i=0;i<=ar.length-1;i++)
+            {
+                if(ar[i]%2!==0 && ar[i]%3==0)
+                {
+                    br.push(ar[i]);
+                }
+            }
+            console.log(br)
+        </script>
+    </body>
+</html>

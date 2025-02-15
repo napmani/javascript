@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Basi Cricket Score Board</title>
+        <style>
+            #div{
+                display: flex;
+                justify-content: center;
+                height: 300px;
+                width: 500px;
+                background-color: rgb(170, 201, 232);
+                border: 1px solid black;
+                margin: auto;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+            }
+            button{
+                margin: 5px;
+                width: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div">
+            <h1 id="runs">0</h1><h1>-</h1><h1 id="wicket">0</h1>
+        </div>
+        <div>
+            <button onclick="fun0()">Zero</button>
+            <button onclick="fun1()">One</button>
+            <button onclick="fun2()">Two</button>
+            <button onclick="fun3()">Three</button>
+            <button onclick="fun4()">Four</button>
+            <button onclick="fun5()">Five</button>
+            <button onclick="fun6()">Six</button>
+            <button onclick="fun7()">Seven</button>
+            <button onclick="funw()">wicket</button>
+        </div>
+        <script>
+            var sum=0;
+            var w=0;
+            function wic(){
+                document.getElementById('wicket').innerText=w;
+            }
+            function fun(){
+                var runs=document.getElementById('runs')
+                runs.innerText=sum;
+            }
+            function fun0(){
+                sum=sum+0;
+                fun();
+            }
+            function fun1(){
+                sum=sum+1;
+                fun();
+            }
+            function fun2(){
+                sum=sum+2;
+                fun();
+            }
+            function fun3(){
+                sum=sum+3;
+                fun();
+            }
+            function fun4(){
+                sum=sum+4;
+                fun();
+            }
+            function fun5(){
+                sum=sum+5;
+                fun();
+            }
+            function fun6(){
+                sum=sum+6;
+                fun();
+            }
+            function fun7(){
+                sum=sum+7;
+                fun();
+            }
+            function funw(){
+                w=w+1;
+                wic();
+                if(w==10){
+                    document.getElementById('div').style.backgroundColor="red"
+                    w--;
+                    document.createElement('h1').innerText='All Out'
+                }
+            }
+        </script>
+    </body>
+</html>

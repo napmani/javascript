@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Print the least scored subject</title>
+    </head>
+    <body>
+        <script>
+            var marks = {
+                                "maths" : 34,
+                                "english" : 56,
+                                "science": 32,
+                                "hindi" : 75,
+                                "social science": 65
+                            };
+            var least=marks["maths"]
+            var leastsub;
+            for(var i in marks)
+            {
+                if(least>=marks[i])
+                {
+                    least=marks[i];
+                    leastsub=i;
+                }
+            }     
+            console.log(least)           
+            console.log(leastsub)           
+        </script>
+    </body>
+</html>

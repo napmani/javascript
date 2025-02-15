@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <div>
+            <div>
+            <button style="display: inline-block;font-size: 50px;background-color: green;" onclick="men()"><i class="bi bi-hand-thumbs-up"></i></button>
+            <p style="display: inline-block;font-size: 50px;color: red;" id="p1">0</p>
+        </div>
+        <div>
+            <button style="display: inline-block;font-size:50px;background-color: red;" onclick="fun()"><i class="bi bi-hand-thumbs-down"></i></button>
+            <p style="display: inline-block;font-size:50px;color: red;" id="p2">0</p>
+        </div>
+        </div>
+        <script>
+            var i=0;
+            function men(){
+                i++;
+                document.getElementById('p1').innerText=i
+            }
+            var j=0;
+            function fun(){
+                j++;
+                document.getElementById('p2').innerText=j
+            }
+        </script>
+    </body>
+</html>

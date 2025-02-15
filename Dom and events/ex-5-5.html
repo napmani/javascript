@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Take an array of objects and create a table form it</title>
+    </head>
+    <body>
+        <script>
+            var x=document.createElement('table')
+            x.border='1'
+            var employe=[
+                       {
+                        Name:'Mani',
+                        Age:36,
+                        Gender:'male',
+                        City:'hyd',
+                        salary:10000
+                       },
+                       {
+                        Name:'srikanth',
+                        Age:32,
+                        Gender:'male',
+                        City:'bangaluru',
+                        salary:20000
+                       },
+                       {
+                        Name:'pradeep',
+                        Age:21,
+                        Gender:'male',
+                        City:'hyd',
+                        salary:25000
+                       },
+                       {
+                        Name:'Mounika',
+                        Age:20,
+                        Gender:'female',
+                        City:'nalgonda',
+                        salary:30000
+                       },
+                       {
+                        Name:'nikil',
+                        Age:22,
+                        Gender:'male',
+                        City:'guntur',
+                        salary:20000
+                       },
+                       {
+                        Name:'riya',
+                        Age:24,
+                        Gender:'female',
+                        City:'indore',
+                        salary:40000
+                       }
+                   ]
+                   var th1=document.createElement('thead')
+                   var tb1=document.createElement('tbody')
+                   var ar=['First name','Age','Gender','City','Salary']
+                   ar.forEach(function(a){
+                    var th2=document.createElement('th')
+                    th2.innerText=a
+                    th1.appendChild(th2)
+
+                   })
+                   employe.forEach(function(a){
+                    var t1=document.createElement('tr')
+                    var t2=document.createElement('td')
+                    t2.innerText=a.Name
+                    t1.appendChild(t2);
+
+                    var t3=document.createElement('td')
+                    t3.innerText=a.Age
+                    t1.appendChild(t3);
+
+                    var t4=document.createElement('td')
+                    t4.innerText=a.Gender
+                    t1.appendChild(t4);
+
+                    var t5=document.createElement('td')
+                    t5.innerText=a.City
+                    t1.appendChild(t5);
+
+                    var t6=document.createElement('td')
+                    t6.innerText=a.salary
+                    t1.appendChild(t6);
+
+                    tb1.appendChild(t1)
+                    x.appendChild(th1)
+                    x.appendChild(tb1)
+                   })
+                   document.body.appendChild(x)
+        </script>
+    </body>
+</html>

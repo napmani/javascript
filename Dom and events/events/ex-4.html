@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div style="height:200px;width:300px;border:1px solid;background-color: red;" id="d1"onclick="fun()"></div>
+        <script>
+            var ar=["red","green","blue","pink","purple","brown","skyblue"]
+            var count=1;
+            function fun(){
+                document.getElementById('d1').style.backgroundColor=ar[count]
+                count=count+1
+                if(count==ar.length)
+                { count=0}
+            }
+        </script>
+    </body>
+</html>

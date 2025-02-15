@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Image Carousel</title>
+    </head>
+    <body>
+        <div style="display: flex;justify-content: center;">
+            <img id="i1" src="" style="height: 200px;width: 350px;">
+        </div>
+        <div style="display: flex;justify-content: space-evenly;margin-top: 20px;">
+            <button onclick="fun1()" style="background-color: orange;">Prev</button>
+            <button onclick="fun2()" style="background-color: orange;">Next</button>
+        </div>
+        <script>
+            var images=["https://th.bing.com/th/id/OIP.6vzBzjT35PYAkPOilYqRXQHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain",
+                        "https://th.bing.com/th/id/OIP.oryV0FJ_xGDGPJ7DarJzYQHaFA?w=275&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+                        "https://images8.alphacoders.com/123/thumb-1920-1232044.jpg",
+                        "https://th.bing.com/th/id/OIP.vX-4aNK1ZHA7Fp3F3aBOywHaFP?pid=ImgDet&w=178&h=125&c=7&dpr=1.5",
+                        "https://th.bing.com/th/id/OIP.PVuROAZBi2zFFvFdSWXz1QHaDt?w=350&h=175&c=7&r=0&o=5&dpr=1.5&pid=1.7"]
+                        document.getElementById('i1').src=images[0]
+                        var i=0;
+                        function fun1(){
+                            i--;
+                            if(i<0)
+                            {
+                                i=4
+                            }  
+                            document.getElementById('i1').src=images[i]
+                        }
+                        function fun2(){
+                            i++;
+                            if(i>4)
+                            {
+                                i=0;
+                            }
+                            document.getElementById('i1').src=images[i]
+                        }
+        </script>
+    </body>
+</html>

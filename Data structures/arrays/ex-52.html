@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Print the second largest element in an array</title>
+    </head>
+    <body>
+        <script>
+            var ar=[23,34,54,10,4,7,99,109,999,889]
+            for(var i=0;i<=ar.length-1;i++)
+            {
+                for(var j=0;j<=ar.length-2;j++)
+                {
+                    if(ar[j]>ar[j+1])
+                    {
+                        var c=ar[j];
+                        ar[j]=ar[j+1];
+                        ar[j+1]=c;
+                    }
+                }
+            }
+            console.log("Second largest element = "+ar[ar.length-2])
+            console.log(ar)
+        </script>
+    </body>
+</html>

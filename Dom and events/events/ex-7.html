@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>toggle button div</title>
+    </head>
+    <body>
+        <div id="d1" style="height:400px;width:900px;border:5px solid;font-size: 100px;">im nothing</div>
+        <button onclick="m()" style="padding-top:20px;padding-bottom: 20px;padding-left: 50px;padding-right: 50px;font-size: 30px;margin-left:3px;margin-top: 10px;">True/False</button>
+        <script>
+            function m(){
+                if(document.getElementById('d1').innerText=="True")
+                {
+                    document.getElementById('d1').innerText="False"
+                }
+                else
+                {
+                    document.getElementById('d1').innerText="True"
+                }
+            }
+        </script>
+    </body>
+</html>

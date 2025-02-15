@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Put even and odd elements of an array in two separate arrays.</title>
+    </head>
+    <body>
+        <script>
+            var ar=[2,3,4,5,6,7,8,9,2000,3333,445,313,3134]
+            var even=[];
+            var odd=[];
+            for(i=0;i<=ar.length-1;i++)
+            {
+                if(ar[i]%2==0)
+                {
+                    even.push(ar[i])
+                }
+                else
+                {
+                    odd.push(ar[i])
+                }
+            }
+            console.log(even)
+            console.log(odd)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Print all the digits of a given number</title>
+    </head>
+    <body>
+        <script>
+            var a=+prompt();
+            var sum=0;
+            while(a!==0)
+            {
+                var rem=a%10;
+                var sum=sum*10+rem;
+                var a=parseInt(a/10);
+            }
+            while(sum!==0)
+            {
+                var rem=sum%10;
+                console.log(rem)
+                sum=parseInt(sum/10)
+            }
+        </script>
+    </body>
+</html>
